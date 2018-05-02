@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.ui.commands">
+      <category name="PasteAsJavaString" id="com.pastejava.commands.category"/>
+      <command name="Paste as Java string" categoryId="com.pastejava.commands.category" id="com.pastejava.commands.paste"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers">
+	  <handler commandId="com.pastejava.commands.paste" class="com.pastejava.handlers.PasteHandler"/>
+   </extension>
+	  
+   <extension point="org.eclipse.ui.bindings">
+      <key commandId="com.pastejava.commands.paste" contextId="org.eclipse.ui.textEditorScope" sequence="M1+M2+V" 
+          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+</plugin>
